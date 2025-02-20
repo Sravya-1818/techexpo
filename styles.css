@@ -15,9 +15,8 @@ header {
     padding: 20px;
     animation: fadeIn 1.5s ease-in-out;
 }
-
-video {
-    width: 100%;
+video{
+    width:100%;
 }
 
 #components {
@@ -98,6 +97,12 @@ section {
     background: white;
 }
 
+.flip-card-front img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
 .flip-card-front h3 {
     color: #0073e6;
 }
@@ -123,16 +128,15 @@ section {
     font-family: 'Courier New', monospace;
     animation: fadeIn 1.5s ease-in-out;
 }
-
+ 
 .code-container pre {
     margin: 0;
     overflow-x: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
-
-/* Space-Themed Header */
-.header {
+  /* Space-Themed Header */
+  .header {
     text-align: center;
     padding: 40px 20px;
     background: radial-gradient(circle at center, #001d3d, #000814); /* Deep Space Effect */
@@ -161,10 +165,32 @@ section {
     color: #d1e8ff; /* Light Blue */
 }
 
-/* Copy Button */
+/* Background Stars Animation */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/9UWYhR7.png'); /* Starry Sky */
+    opacity: 0.4;
+    animation: starsMove 10s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes starsMove {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
 .copy-btn {
     position: absolute;
-    right: 10px;
+   left:900px;
     background: #0073e6;
     color: white;
     border: none;
@@ -179,8 +205,8 @@ section {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -197,10 +223,6 @@ section {
     .flip-card {
         width: 90%;
     }
-
-    .copy-btn {
-        right: 5px;
-    }
 }
 
 ul li::before {
@@ -209,6 +231,20 @@ ul li::before {
     margin-right: 8px;
 }
 
-#arduino-code {
-    text-align: left;
+ol li::before {
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .component-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .flip-card {
+        width: 90%;
+    }
+}
+#arduino-code{
+text-align:left;
 }
