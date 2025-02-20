@@ -235,16 +235,61 @@ ol li::before {
     font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+    /* Adjust container layout */
     .component-container {
         flex-direction: column;
         align-items: center;
     }
+
+    /* Make flip cards take full width */
     .flip-card {
-        width: 90%;
+        width: 100%;
+        max-width: 300px;
     }
-}
-#arduino-code{
-text-align:left;
+
+    /* Adjust header font sizes */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    /* Reduce section padding */
+    section {
+        padding: 15px;
+        width: 95%;
+    }
+
+    /* Ensure video fits screen */
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust code snippet container */
+    .code-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    /* Copy button positioning */
+    .copy-btn {
+        left: auto;
+        right: 10px;
+        top: 10px;
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    /* Reduce title size */
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
 }
