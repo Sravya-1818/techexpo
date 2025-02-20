@@ -191,7 +191,11 @@ section {
 .copy-btn:hover {
     background: #005bb5;
 }
-
+#code-block{
+    text-align:left;
+    margin-left:10px;
+    
+}
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
