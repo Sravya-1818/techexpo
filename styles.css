@@ -173,7 +173,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://i.imgur.com/9UWYhR7.png'); /* Starry Sky */
+   
     opacity: 0.4;
     animation: starsMove 10s linear infinite;
 }
