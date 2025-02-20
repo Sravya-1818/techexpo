@@ -188,85 +188,18 @@ section {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* ✅ Responsive Design */
-@media (max-width: 1024px) {
-    /* Adjusting flip cards for tablets */
-    .component-container {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .flip-card {
-        width: 200px;
-        height: 180px;
-    }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    /* Adjusting components for smaller tablets */
     .component-container {
         flex-direction: column;
         align-items: center;
     }
-
     .flip-card {
         width: 90%;
-        max-width: 300px;
-        height: auto;
-    }
-
-    .header {
-        padding: 30px 15px;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Mobile Adjustments */
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .flip-card {
-        width: 100%;
-        max-width: 280px;
-        height: auto;
-    }
-
-    .flip-card-inner {
-        height: 180px;
     }
 
     .copy-btn {
-        font-size: 0.8rem;
-        padding: 4px 8px;
-    }
-
-    .code-container {
-        font-size: 0.9rem;
-    }
-
-    .title {
-        font-size: 1.8rem;
-    }
-
-    .subtitle {
-        font-size: 0.9rem;
-    }
-
-    ul li::before {
-        content: "✔";
-        font-size: 0.9rem;
+        right: 5px;
     }
 }
 
