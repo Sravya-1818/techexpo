@@ -165,18 +165,7 @@ section {
     color: #d1e8ff; /* Light Blue */
 }
 
-/* Background Stars Animation */
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   
-    opacity: 0.4;
-    animation: starsMove 10s linear infinite;
-}
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -235,20 +224,17 @@ ol li::before {
     font-weight: bold;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Adjust container layout */
-    .component-container {
-        flex-direction: column;
-        align-items: center;
+    /* Adjusting Sections for Small Screens */
+    section {
+        width: 95%;
+        padding: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    /* Make flip cards take full width */
-    .flip-card {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    /* Adjust header font sizes */
+    /* Make the header text smaller */
     header h1 {
         font-size: 1.8em;
     }
@@ -257,34 +243,61 @@ ol li::before {
         font-size: 1em;
     }
 
-    /* Reduce section padding */
-    section {
-        padding: 15px;
-        width: 95%;
+    /* Adjust Flip Cards for Mobile */
+    .component-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Ensure video fits screen */
-    video {
-        width: 100%;
+    .flip-card {
+        width: 90%;
         height: auto;
     }
 
-    /* Adjust code snippet container */
+    /* Fixing Code Box Overflow */
     .code-container {
-        padding: 10px;
         width: 95%;
+        padding: 10px;
+        overflow-x: auto;
+        white-space: pre-wrap; /* Wrap long lines */
+        word-wrap: break-word;
     }
 
-    /* Copy button positioning */
+    .code-container pre {
+        white-space: pre-wrap; /* Ensures text wraps */
+        word-break: break-word;
+    }
+
+    /* Adjust Button Position */
     .copy-btn {
         left: auto;
-        right: 10px;
+        right: 10px; /* Aligns button to the right */
         top: 10px;
-        font-size: 14px;
-        padding: 5px 8px;
+        font-size: 0.9em;
+        padding: 5px;
     }
 
-    /* Reduce title size */
+    /* Reduce Spacing in Flip Cards */
+    .flip-card {
+        margin-bottom: 20px;
+    }
+
+    /* Ensure Flip Card Content is Centered */
+    .flip-card-front img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .flip-card-front h3 {
+        font-size: 1.2em;
+    }
+
+    /* Reduce Header Padding */
+    .header {
+        padding: 20px 10px;
+    }
+
+    /* Reduce Font Sizes */
     .title {
         font-size: 2rem;
     }
