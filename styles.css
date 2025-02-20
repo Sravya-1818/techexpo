@@ -284,6 +284,8 @@ ol li::before {
     /* Reduce Spacing in Flip Cards */
     .flip-card {
         margin-bottom: 20px;
+        height:100px;
+        width:100px;
     }
 
     /* Ensure Flip Card Content is Centered */
