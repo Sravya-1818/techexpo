@@ -191,7 +191,8 @@ section {
         flex-direction: column; /* Stack cards */
         align-items: center; /* Center them */
         gap: 20px; /* Add spacing */
-        width: 100%; /* Use full width */
+        width: 100%;
+        height:auto;/* Use full width */
     }
 
     .flip-card {
