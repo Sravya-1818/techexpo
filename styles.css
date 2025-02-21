@@ -184,6 +184,7 @@ section {
     .flip-card {
         width: 90%;
         height: auto;
+        height:100%;
     }
 
     .code-container {
