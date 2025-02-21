@@ -122,8 +122,9 @@ section {
     text-align: left;
     width: 90%;
     max-width: 900px;
-    margin: 20px auto;
+    margin: 10px auto;
     font-family: 'Courier New', monospace;
+    
 }
 
 .code-container pre {
