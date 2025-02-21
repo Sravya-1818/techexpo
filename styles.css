@@ -184,7 +184,61 @@ section {
     .flip-card {
         width: 90%;
         height: auto;
-        height:100%;
+    }
+
+    .code-container {
+        width: 95%;
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .copy-btn {
+        right: 10px;
+        top: 10px;
+        font-size: 0.9em;
+        padding: 5px;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+        padding: 10px;
+        word-wrap: break-word;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .component-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .flip-card {
+        width: 100%; /* Take full width */
+        max-width: 300px; /* Limit size for aesthetics */
+        height: auto;
+    }
+
+    .flip-card-inner {
+        min-height: 220px; /* Ensure a proper height */
+    }
+
+    .flip-card-front, 
+    .flip-card-back {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .flip-card-front img {
+        width: 80px;
+        height: 80px;
     }
 
     .code-container {
